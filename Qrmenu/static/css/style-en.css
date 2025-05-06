@@ -1,0 +1,39 @@
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    /* للغة الإنجليزية */
+    direction: ltr;
+}
+
+.popup.popup2,
+.custom-box {
+    direction: rtl;
+}
+
+.data-time,
+.custom-spacing,
+.custom-box-product,
+article.calories-all,
+.popup-content,
+.text-additional,
+label.checkbox-and-name-item-add-and-price-additional,
+article.calories-all-popframe,
+span.pound-description,
+.tex,
+.button-container {
+    direction: ltr;
+}
+
+.custom-box-product,
+article.overlay-card {
+    border-radius: 0 25px 10px 10px;
+}
+
+.icon-plus-calories-all-price i.fa-solid.fa-plus {
+    right: 0;
+    border-radius: 0 25px 0 10px;
+}
+
+
+.menu-container a, .custom-box {
+    font-size: 13px !important;
+}

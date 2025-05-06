@@ -1,0 +1,1253 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+    {% for setting in site_settings %}
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=grid_view" /><link
+        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    {% for setting in site_settings %}
+    <link rel="icon" href="{{ setting.logo.url }}" type="image/x-icon">
+        {% if setting.name %}
+        <title>{{ setting.name }}</title>
+        {% else %}
+        <title>name</title>
+        {% endif %}
+    {% endfor %}
+    
+</head>
+{% for color in colors %}
+<body>
+    
+    <!-- ////////// Start Load \\\\\\\\\\ -->
+    <article class="shadow-portal" id="loader">
+        {% for setting in site_settings %}
+        <article class="spinner-orb">
+            {% if setting.logo %}
+            <img src="{{ setting.logo.url }}" alt="Logo">
+            {% endif %}
+        </article>
+    </article>
+    {% endfor %}
+    <!-- ////////// End Load \\\\\\\\\\ -->
+    
+    <section class="all-project" style="background-color: {{ color.color }};">
+
+
+        <article class="overlay_ads">
+            <article class="carousel-modal">
+                <button class="close-button-ads">
+                    <i class="exitMark fa-solid fa-xmark"></i>
+                </button>
+                <article class="carousel-container">
+                    <article class="carousel">
+                        <article class="slide_ads">
+                            <img src="{% static 'slide/images (3).jpg' %}" alt="" srcset="">
+                        </article>
+                        <article class="slide_ads">
+                            <img src="{% static 'slide/تصميم-اعلان-مقهى-8.jpg' %}" alt="" srcset="">
+                        </article>
+                        <article class="slide_ads">
+                            <img src="{% static 'slide/ف.png' %}" alt="" srcset="">
+                        </article>
+                    </article>
+                </article>
+                <article class="text-buttons">
+                    <button class="text-prev">
+                        <svg class="arrow-prev" fill="#000000" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 66.307 66.307" xml:space="preserve" transform="rotate(180)">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <path
+                                        d="M64.702,30.366L37.12,14.442c-0.995-0.574-2.221-0.574-3.217,0s-1.609,1.639-1.609,2.787v13.072L4.827,14.442 c-0.997-0.574-2.222-0.574-3.218,0S0,16.081,0,17.229v31.849c0,1.148,0.613,2.211,1.609,2.785c0.498,0.287,1.053,0.432,1.608,0.432 s1.111-0.145,1.609-0.432l27.466-15.857v13.072c0,1.148,0.612,2.211,1.608,2.785c0.498,0.287,1.055,0.432,1.609,0.432 s1.111-0.145,1.607-0.432l27.582-15.924c0.996-0.574,1.609-1.637,1.609-2.787C66.311,32.004,65.698,30.94,64.702,30.366z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="text-next">
+                        <svg class="arrow-next" fill="#000000" version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 66.307 66.307" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <path
+                                        d="M64.702,30.366L37.12,14.442c-0.995-0.574-2.221-0.574-3.217,0s-1.609,1.639-1.609,2.787v13.072L4.827,14.442 c-0.997-0.574-2.222-0.574-3.218,0S0,16.081,0,17.229v31.849c0,1.148,0.613,2.211,1.609,2.785c0.498,0.287,1.053,0.432,1.608,0.432 s1.111-0.145,1.609-0.432l27.466-15.857v13.072c0,1.148,0.612,2.211,1.608,2.785c0.498,0.287,1.055,0.432,1.609,0.432 s1.111-0.145,1.607-0.432l27.582-15.924c0.996-0.574,1.609-1.637,1.609-2.787C66.311,32.004,65.698,30.94,64.702,30.366z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </article>
+            </article>
+        </article>
+
+        <!-- ////////// Start Slider \\\\\\\\\\ -->
+        <section class="img_slider">
+            <!--image slider start-->
+            <article class="slider">
+                <article class="slides">
+                    <!--radio buttons start-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <!--radio buttons end-->
+                    <!--slide images start-->
+                     {% for setting in site_settings %}
+                    <article class="slide first">
+                        {% if setting.logo %}
+                        <img src="{{ setting.logo.url }}" alt="Logo">
+                        {% endif %}
+                    </article>
+                    {% endfor %}
+
+                    {% for slider in Slider_img %}
+                    <article class="slide">
+                        {% if slider.image %}
+                        <img src="{{ slider.image.url }}" alt="Logo">
+                        {% endif %}
+                    </article>
+                    {% endfor %}
+                    <!--slide images end-->
+                </article>
+            </article>
+            <!--image slider end-->
+        </section>
+        <!-- ////////// End Slider \\\\\\\\\\ -->
+<!-- ////////// Start branch \\\\\\\\\\ -->
+    <button class="openPopup branch" data-popup="popup1" style="background-color: {{ color.color }};color: {{ color.color_name }}; ">
+        الفروع
+        {% for branch in branches %}
+        <p>{{ branch.name }}</p>
+        {% endfor %}
+    </button>
+    <article class="popup-overlay" id="popup1">
+        <button class="close-btn" style="background-color: {{ color.color }}; color: {{ color.color_text }};" data-close="popup1"><i class="fa-solid fa-arrow-right"></i></button>
+    <article class="popup popup1" style="background-color: {{ color.color }};">
+
+        <article class="profile-pic-branch-and-place-name">
+            <img class="profile-pic-branch" src="{{ setting.logo.url }}" alt="" srcset="">
+            <h1 class="place-name" style="color: {{ color.color_text }}; ">
+                {{ setting.name }}
+            </h1>
+            <h2 class="name-branches" style="color: {{ color.color_text }}; ">
+                الفروع
+            </h2>
+        </article>
+         
+        <article class="branches-all">
+           {% for branch in branches %}
+            <article class="branches-place" style="background-color: {{ color.color_text }};">
+               
+                <a href="" class="img-place-description-place" style="color: {{ color.color_price }};">
+                    <article class="img-place">
+                        <img src="{{ setting.logo.url }}" alt="" srcset="">
+                    </article>
+                    <article class="description-place">
+                        <span>
+                            فرع: <span>
+                               {{ branch.name_branches }} 
+                            </span>
+                        </span>
+                    </article>
+                </a>
+                
+                <article class="popup-share-branch" id="popup_share_branch">
+                    <article class="content-share-branch">
+                        <article class="btn-copy-link-and-copied-link">
+                            <span class="btn-copy-link" onclick="copyLinkB12()">
+                               <img src="{% static 'images/copylink.svg' %}" alt="" srcset="">
+                                Copy Link
+
+                            </span>
+                        </article>
+                        <a href="#" class="btn-copy-link" id="WhatsApp-1" target="_blank">
+                            <img src="{% static 'images/whatsapp-icon-seeklogo.svg' %}" alt="" srcset="">
+                            WhatsApp
+                        </a>
+
+                        <a href="#" class="btn-copy-link" id="Telegram-1" target="_blank">
+                            <img src="{% static 'images/Telegram-01.svg' %}" alt="" srcset="">
+                            Telegram</a>
+
+                        <a href="#" class="btn-copy-link" id="twiter-1" target="_blank">
+                            <img src="{% static 'images/x.svg' %}" alt="" srcset="">
+                            X</a>
+
+                        <a href="#" class="btn-copy-link" id="Facebook-1" target="_blank">
+                            <img src="{% static 'images/facebook.svg' %}" alt="" srcset="">
+                            Facebook</a>
+
+                        <a href="#" class="btn-copy-link" id="Messenger-1" target="_blank">
+                            <img src="{% static 'images/Facebook-messenger-02.svg' %}" alt="" srcset="">
+                            Messenger</a>
+
+                        <a href="#" class="btn-copy-link" id="TikTok-1" target="_blank">
+                            <img src="{% static 'images/tiktok.svg' %}" alt="" srcset="">
+                            TikTok</a>
+
+                        <a href="#" class="btn-copy-link" id="Snapchat-1" target="_blank">
+                            <img src="{% static 'images/Snap-Ghost-01.svg' %}" alt="" srcset="">
+                            Snapchat</a>
+
+                        <a href="#" class="btn-copy-link" id="LinkedIn-1" target="_blank">
+                            <img src="{% static 'images/Linkedin-02.svg' %}" alt="" srcset="">
+                            LinkedIn</a>
+
+                    </article>
+                    <button class="close-share-branch" onclick="closePopX()">إغلاق</button>
+                </article>
+                <article class="menu-container-branch">
+                    <article class="menu-icon-branch" style="color: {{ color.color_price }};" onclick="toggleMenu(this)">
+                        <i class="fa-solid fa-ellipsis-vertical"> <a href=""></a></i>
+                        <article class="dropdown-branch" style="background-color: {{ color.color }};">
+                            <ul>
+                                <li class="item-share-branch" style="color: {{ color.color_text }}; ">
+                                    <span class="share-branch" 
+                                        onclick="openPopX('http://127.0.0.1:5502/wwejfejfdijf.html')">
+                                        مشاركة
+                                        <i class="fa-solid fa-share-from-square"></i>
+                                    </span>
+
+                                </li>
+                                <li class="item-place-branch">
+                                    <a style="color: {{ color.color_text }}; " class="place-branch" target="blank" href="{{ branch.location }}">
+                                        المكان
+                                        <svg fill="#ffffff" width="20px" height="20px" viewBox="-1.5 0 19 19"
+                                            xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"
+                                            stroke="#ffffff">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <path
+                                                    d="M15.084 15.2H.916a.264.264 0 0 1-.254-.42l2.36-4.492a.865.865 0 0 1 .696-.42h.827a9.51 9.51 0 0 0 .943 1.108H3.912l-1.637 3.116h11.45l-1.637-3.116h-1.34a9.481 9.481 0 0 0 .943-1.109h.591a.866.866 0 0 1 .696.421l2.36 4.492a.264.264 0 0 1-.254.42zM11.4 7.189c0 2.64-2.176 2.888-3.103 5.46a.182.182 0 0 1-.356 0c-.928-2.572-3.104-2.82-3.104-5.46a3.282 3.282 0 0 1 6.563 0zm-1.86-.005a1.425 1.425 0 1 0-1.425 1.425A1.425 1.425 0 0 0 9.54 7.184z">
+                                                </path>
+                                            </g>
+                                        </svg>
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a style="color: {{ color.color_text }}; " class="menu-branch" target="blank" href="{{ branch.url_branch }}">
+                                        المنيو
+                                    </a>
+
+
+                                </li>
+                            </ul>
+                        </article>
+                    </article>
+                </article>
+            </article>
+            {% endfor %}
+        </article>
+    </article>
+   
+    </article>
+    
+<!-- ////////// Start menu Lang \\\\\\\\\\ -->
+<article id="overlay_language"></article> <!-- الخلفية المعتمة -->
+<article id="languageMenu" style="background-color: {{ color.color }};">
+
+    <article class="menu-header">
+        <span>اختر اللغة</span>
+        <i class="fa-solid fa-xmark" id="closeButton"></i>
+    </article>
+    <ul class="name-lang">
+        <li data-lang="Arabic" style="color: {{ color.color_name }};">
+            <a href="{% url 'menu' %}">Arabic</a>
+        </li>
+        <li data-lang="En" style="color: {{ color.color_name }};">
+            <a href="{% url 'en' %}">English</a>
+        </li>
+    </ul>
+</article>
+<!-- ////////// End menu Lang \\\\\\\\\\ -->
+
+        <!-- ////////// Start \\\\\\\\\\ -->
+        <article class="icon-heart-and-profile-and-discription-and-button-and-icon-globe">
+
+            <article class="button-and-icon-globe">
+                <span class="language" id="languagespan" style="color: {{ color.color_text }};">Arabic
+                    <i class="fa-solid fa-globe"></i>
+                </span>
+            </article>
+
+            <article class="profile-and-discription">
+                <!-- //////////دا كود محدش ييجي عندة -->
+                <article class="overlay" id="overlay" onclick="closeImage(event)">
+                    <span class="close-profile" style="background-color: {{ color.color }}; color: {{ color.color_text }};" onclick="closeImage()"><i class="fa-solid fa-xmark"></i></span>
+                    <img id="overlay-img" src="" alt="Expanded Image">
+                </article>
+                <!-- ///////////////////////////////////// -->
+                {% for setting in site_settings %}
+                <img class="profile-pic" src="{{ setting.logo.url }}" alt="Profile" onclick="openImage(this)">
+                {% endfor %}
+                <h1 class="place-name"style="color: {{ color.color_text }};">
+                    {% for setting in site_settings %}
+                        {{ setting.name }}
+                    {% endfor %}
+                </h1>
+                <h1 class="place-name" style="color: {{ color.color_price }};">
+                    {% for setting in site_settings %}
+                    {% if setting.desc %}
+                        {{ setting.desc }}
+                    {% endif %}
+                {% endfor %}
+                </h1>
+  
+             <!-- ======= زر فتح النافذة المنبثقة 1 ======= -->
+             <span class="openPopup" data-popup="popup2">
+                <svg class="icon-clock" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 142.447 142.447" xml:space="preserve"
+                        fill="#">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path  style="fill: {{ color.color_text }};"
+                                    d="M71.224,0C31.951,0,0,31.951,0,71.224s31.951,71.224,71.224,71.224s71.224-31.951,71.224-71.224 S110.496,0,71.224,0z M71.224,127.447C40.222,127.447,15,102.226,15,71.224S40.222,15,71.224,15s56.224,25.222,56.224,56.224 S102.226,127.447,71.224,127.447z">
+                                </path>
+                                <path  style="fill: {{ color.color_text }};"
+                                    d="M100.923,72.016H71.724V46.724c0-4.143-3.357-7.5-7.5-7.5s-7.5,3.357-7.5,7.5v32.792 c0,4.143,3.357,7.5,7.5,7.5h36.699c4.143,0,7.5-3.357,7.5-7.5S105.065,72.016,100.923,72.016z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+            </span>
+            <!-- ======= النافذة المنبثقة 1 ======= -->
+            <article class="popup-overlay" id="popup2">
+                <button class="close-btn" data-close="popup2" style="background-color: {{ color.color }}; color: {{ color.color_text }};"><i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <article class="popup popup2" style="background-color: {{ color.color }}; color: {{ color.color_text }};" >
+
+                    <h1 class="work-timings">أوقات العمل</h1>
+            
+                    {% for time in hours %}
+            {% if 'all' in time.days %}
+                <!-- إذا تم اختيار "كل الأيام" -->
+                <article class="time-popup">
+                    <span class="day">السبت</span>
+                    {% if time.is_closed %}
+                            <article class="data-time">
+                                <span class="closed-text">مغلق</span>
+                            </article>
+                            {% elif time.is_open_24h %}
+                            <article class="data-time">
+                                <span class="closed-text">24 ساعة</span>
+                            </article>
+                            {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                            {% if time.open_period == 'AM' %} ص
+                            {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                    {% endif %}
+                </article>
+                <article class="time-popup">
+                    <span class="day">الأحد</span>
+                    {% if time.is_closed %}
+                            <article class="data-time">
+                                <span class="closed-text">مغلق</span>
+                            </article>
+                            {% elif time.is_open_24h %}
+                            <article class="data-time">
+                                <span class="closed-text">24 ساعة</span>
+                            </article>
+                            {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                            {% if time.open_period == 'AM' %} ص
+                            {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                    {% endif %}
+                </article>
+                <article class="time-popup">
+                    <span class="day">الاثنين</span>
+                    {% if time.is_closed %}
+                            <article class="data-time">
+                                <span class="closed-text">مغلق</span>
+                            </article>
+                        {% elif time.is_open_24h %}
+                        <article class="data-time">
+                            <span class="closed-text">24 ساعة</span>
+                        </article>
+                        {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                            {% if time.open_period == 'AM' %} ص
+                            {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                    {% endif %}
+                </article>
+                <article class="time-popup">
+                    <span class="day">الثلاثاء</span>
+                    {% if time.is_closed %}
+                            <article class="data-time">
+                                <span class="closed-text">مغلق</span>
+                            </article>
+                            {% elif time.is_open_24h %}
+                            <article class="data-time">
+                                <span class="closed-text">24 ساعة</span>
+                            </article>
+                            {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                            {% if time.open_period == 'AM' %} ص
+                            {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                    {% endif %}
+                </article>
+                <article class="time-popup">
+                    <span class="day">الأربعاء</span>
+                    {% if time.is_closed %}
+                            <article class="data-time">
+                                <span class="closed-text">مغلق</span>
+                            </article>
+                            {% elif time.is_open_24h %}
+                            <article class="data-time">
+                                <span class="closed-text">24 ساعة</span>
+                            </article>
+                            {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                            {% if time.open_period == 'AM' %} ص
+                            {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                    {% endif %}
+                </article>
+                <article class="time-popup">
+                    <span class="day">الخميس</span>
+                    {% if time.is_closed %}
+                            <article class="data-time">
+                                <span class="closed-text">مغلق</span>
+                            </article>
+                            {% elif time.is_open_24h %}
+                            <article class="data-time">
+                                <span class="closed-text">24 ساعة</span>
+                            </article>
+                            {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                                {% if time.open_period == 'AM' %} ص
+                                {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                            
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                    {% endif %}
+                </article>
+                <article class="time-popup">
+                    <span class="day">الجمعة</span>
+                    {% if time.is_closed %}
+                            <article class="data-time">
+                                <span class="closed-text">مغلق</span>
+                            </article>
+                            {% elif time.is_open_24h %}
+                            <article class="data-time">
+                                <span class="closed-text">24 ساعة</span>
+                            </article>
+                    {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                            {% if time.open_period == 'AM' %} ص
+                            {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                    {% endif %}
+                </article>
+            {% else %}
+        <!-- إذا كانت الأيام مختارة بشكل منفصل -->
+        {% for day in time.days %}
+            <article class="time-popup">
+                <span class="day">
+                    {% if day == 'Sat' %} السبت
+                    {% elif day == 'Sun' %} الأحد
+                    {% elif day == 'Mon' %} الاثنين
+                    {% elif day == 'Tue' %} الثلاثاء
+                    {% elif day == 'Wed' %} الأربعاء
+                    {% elif day == 'Thu' %} الخميس
+                    {% elif day == 'Fri' %} الجمعة
+                    {% endif %}
+                </span>
+
+                <!-- تحقق مما إذا كان اليوم مغلقًا -->
+                {% if time.is_closed %}
+                    <article class="data-time">
+                        <span class="closed-text">مغلق</span>
+                    </article>
+                {% elif time.is_open_24h %}
+                <article class="data-time">
+                    <span class="closed-text">24 ساعة</span>
+                </article>
+                {% else %}
+                    <article class="data-time">
+                        <span class="start-work-time">
+                            {{ time.open_time|date:"h:i" }}
+                            {% if time.open_period == 'AM' %} ص
+                            {% elif time.open_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                        <span>إلى</span>
+                        <span class="end-work-time">
+                            {{ time.close_time|date:"h:i" }}
+                            {% if time.close_period == 'AM' %} ص
+                            {% elif time.close_period == 'PM' %} م
+                            {% endif %}
+                        </span>
+                    </article>
+                {% endif %}
+            </article>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+            
+                </article>
+            </article>
+        
+                <article class="socialmedia">
+                    <a href="tel:0123456789">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-phone-call-icon lucide-phone-call" style="color: {{ color.color_text }};">
+                        <path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <path d="M14.05 2a9 9 0 0 1 8 7.94" />
+                        <path d="M14.05 6A5 5 0 0 1 18 10" />
+                    </svg>
+                    </a>
+                    <a href="https://wa.me/01026775729" target="_blank">
+                        <i style="color: {{ color.color_text }};" class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/15hDkAqaMQ/" target="_blank">
+                        <svg class="icon-facebook" version="1.1" id="Capa_1" 
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 48.605 48.605" xml:space="preserve">
+                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                       <g id="SVGRepo_iconCarrier">
+                           <g>
+                               <path class="icon-path"
+                                     d="M34.094,8.688h4.756V0.005h-8.643c-0.721-0.03-9.51-0.198-11.788,8.489c-0.033,0.091-0.761,2.157-0.761,6.983l-7.903,0.024 v9.107l7.913-0.023v24.021h12.087v-24h8v-9.131h-8v-2.873C29.755,10.816,30.508,8.688,34.094,8.688z M35.755,17.474v5.131h-8v24 h-8.087V22.579l-7.913,0.023v-5.107l7.934-0.023l-0.021-1.017c-0.104-5.112,0.625-7.262,0.658-7.365 c1.966-7.482,9.473-7.106,9.795-7.086l6.729,0.002v4.683h-2.756c-4.673,0-6.338,3.054-6.338,5.912v4.873L35.755,17.474 L35.755,17.474z"
+                                     fill="{{ color.color_text }}" stroke="{{ color.color_text }}" stroke-width="2">
+                               </path>
+                           </g>
+                       </g>
+                   </svg>
+                    </a>
+                    <a href="https://www.instagram.com/amr_khalid_youssef?igsh=dnBpdDYzeXh6aGxp" target="_blank">
+                        <i style="color: {{ color.color_text }};" class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.instagram.com/amr_khalid_youssef?igsh=dnBpdDYzeXh6aGxp" target="_blank">
+                        <svg class="icon-tiktok" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        version="1.1" viewBox="0 0 256 256" xml:space="preserve">
+                       <g style="stroke: none; stroke-width: 0; fill: none; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)">
+                           <path d="M 34.15 90 c -6.499 0 -12.627 -2.073 -17.725 -5.995 c -0.951 -0.732 -1.866 -1.532 -2.723 -2.378 c -5.947 -5.878 -8.94 -13.705 -8.426 -22.041 c 0.389 -6.3 2.928 -12.372 7.149 -17.1 c 5.594 -6.266 13.309 -9.717 21.724 -9.717 c 1.445 0 2.906 0.108 4.343 0.321 c 0.98 0.146 1.706 0.987 1.706 1.979 v 14.257 c 0 0.642 -0.308 1.245 -0.828 1.621 c -0.521 0.375 -1.19 0.479 -1.799 0.278 c -1.093 -0.361 -2.229 -0.544 -3.38 -0.544 c -2.905 0 -5.626 1.138 -7.663 3.204 c -2.025 2.057 -3.118 4.777 -3.074 7.662 c 0.055 3.721 2.014 7.094 5.239 9.022 c 1.486 0.89 3.179 1.409 4.896 1.503 c 1.356 0.074 2.695 -0.104 3.981 -0.527 c 4.4 -1.454 7.357 -5.536 7.357 -10.159 L 44.948 2 c 0 -1.104 0.896 -2 2 -2 H 60.99 c 1.098 0 1.99 0.884 2 1.982 c 0.012 1.249 0.139 2.491 0.378 3.691 c 0.943 4.741 3.601 8.962 7.481 11.888 c 3.426 2.584 7.51 3.957 11.815 3.973 c 0.154 -0.01 0.313 0 0.471 0.029 c 0.951 0.172 1.643 1 1.643 1.967 v 13.98 c 0 1.104 -0.896 2 -1.999 2 c -0.004 0 -0.009 0 -0.012 0 c -5.073 0 -10.002 -0.995 -14.651 -2.957 c -1.768 -0.747 -3.474 -1.625 -5.101 -2.627 l 0.063 27.565 c -0.032 7.617 -3.045 14.763 -8.48 20.136 c -4.412 4.361 -9.981 7.146 -16.106 8.054 C 37.065 89.893 35.604 90 34.15 90 z M 34.15 36.769 c -7.26 0 -13.916 2.977 -18.74 8.381 c -3.626 4.061 -5.807 9.274 -6.141 14.682 c -0.441 7.166 2.132 13.896 7.246 18.949 c 0.74 0.731 1.531 1.422 2.352 2.055 C 23.256 84.214 28.542 86 34.15 86 c 1.258 0 2.521 -0.093 3.755 -0.276 c 5.278 -0.781 10.078 -3.182 13.88 -6.941 c 4.675 -4.62 7.265 -10.762 7.293 -17.295 l -0.072 -31.372 c -0.002 -0.763 0.431 -1.461 1.115 -1.798 c 0.685 -0.336 1.503 -0.257 2.106 0.21 c 2.276 1.756 4.78 3.216 7.443 4.341 c 3.544 1.495 7.271 2.362 11.106 2.584 v -9.998 c -4.485 -0.362 -8.716 -1.969 -12.337 -4.7 c -4.666 -3.517 -7.86 -8.596 -8.996 -14.3 C 59.285 5.649 59.166 4.829 59.09 4 H 48.948 l -0.018 57.389 c 0 6.35 -4.06 11.959 -10.104 13.956 c -1.763 0.581 -3.598 0.821 -5.454 0.723 c -2.364 -0.129 -4.692 -0.843 -6.732 -2.064 c -4.423 -2.646 -7.109 -7.279 -7.186 -12.396 c -0.059 -3.964 1.441 -7.703 4.225 -10.528 c 2.793 -2.836 6.527 -4.397 10.512 -4.397 c 0.673 0 1.343 0.046 2.007 0.137 v -9.966 C 35.516 36.797 34.831 36.769 34.15 36.769 z"
+                                 fill="{{ color.color_text }}" stroke="{{ color.color_text }}" stroke-width="5" />
+                       </g>
+                   </svg>
+                   
+                    </a>
+                    <a href="https://maps.app.goo.gl/QGKnxv3kjbWzhbxe8" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin-icon lucide-map-pin" style="color: {{ color.color_text }};">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                        <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    </a>
+                </article>
+            </article>
+        </article>
+        <!-- ////////// End \\\\\\\\\\ -->
+
+ 
+
+        <!-- ////////// Start \\\\\\\\\\ -->
+        <article class="random1">
+            <article class="random2" style="border: solid 2px {{ color.color_text }};" onclick="toggleContent()">
+                <i class="fa-solid fa-bars" style="color: {{ color.color_text }};"></i> <!-- أيقونة القائمة -->
+                <article class="random3" style="border: solid 2px {{ color.color_text }};"></article>
+                <i class="material-symbols-outlined" style="color: {{ color.color_text }};">grid_view</i> <!-- أيقونة الشبكة -->
+            </article>
+        </article>
+
+        <article id="block1" class="random4 active">
+       <!-- ////////// Start menu-container \\\\\\\\\\ -->
+       <article class="menu-container" style="background-color: {{ color }};">
+        {% for category in main_categories%}
+        <a href="#{{ category.name }}" onclick="event.preventDefault(); openAccordion('{{ category.name }}')">
+            {% if category.uploudImg_Category %}
+            <img src="{{ category.uploudImg_Category.url }}" alt="">
+            {% else %}
+            {% for setting in site_settings %}
+            <img src="{{ setting.logo.url }}">
+            {% endfor %}
+            {% endif %}
+            <span style="color: {{ color.color_text }};">
+                {{ category.name }}
+            </span>
+        </a>   
+        {% endfor %}
+    </article>
+ <!-- ////////// ENd menu-container \\\\\\\\\\ -->
+            <!-- ////////// Start According \\\\\\\\\\ -->
+            <article class="countainer-item">
+                {% for category in main_categories %}
+                <article class="custom-container">
+                    <article class="custom-box"  onclick="toggleAccordion('{{ category.name }}', this)" style="background-color: {{ color.color_text }}";>
+                        <span class="accordion-icon"> <i class="icon fas fa-chevron-down"></i></span>
+                        <article class="img-main-product">
+                            <span style="color: {{ color.color_price }}";>{{ category.name }}</span>
+                            {% if category.uploudImg_Category %}
+                            <img class="category-item" src="{{ category.uploudImg_Category.url }}" alt="">
+                            {% else %}
+                            <img class="category-item" src="{{ setting.logo.url }}">
+                            {% endif %}
+                        </article>
+                    </article>
+            
+                    <article id="{{ category.name }}" class="accordion-content" 
+                        data-products="{% for subcategory in category.subcategories.all %}accordion-{{ subcategory.name }}{% if not forloop.last %},{% endif %}{% endfor %}">
+                        <article class="custom-spacing">
+                            {% if category.subcategories.all %}
+                                {% for subcategory in category.subcategories.all %}
+                                <article class="relative" id="accordion-{{ subcategory.name }}" style="background-color: {{ color.color }};">
+                                    {% if subcategory.not_dound %}
+                                    <article class="custom-box-product" onclick="togglePopup ('popup-accordion-{{ subcategory.name }}')">
+                                        <article class="img-product">
+                                            <article class="overlay-card">
+                                                غير متوفر
+                                            </article>
+                                            {% if subcategory.uploudImg_SubCategory %}
+                                            <img src="{{ subcategory.uploudImg_SubCategory.url }}" alt="{{ subcategory.name }}">
+                                            {% else %}
+                                            <img class="category-item" src="{{ site_settings.first.logo.url }}">
+                                            {% endif %}
+                                        </article>
+                                        <article class="content-product">
+                                            <h3 style="color: {{ color.color_text }};">{{ subcategory.name }}</h3>
+                                            {% if subcategory.description %}
+                                            <p class="description_text" style="color: {{ color.color_text }};">{{ subcategory.description }}</p>
+                                            {% endif %}
+                                            <article class="calories-all" style="color: {{ color.color_text }};">
+                                                {% if subcategory.caloreis %}
+                                                <img src="{% static 'callories.svg' %}" alt="Calories">
+                                                <span class="number-calories">{{ subcategory.caloreis|floatformat:0 }} سعره</span>
+                                                {% endif %}
+                                            </article>
+                                        </article>
+                                        <article class="icon-plus-calories-all-price">
+                                            <i class="fa-solid fa-plus" style="left: 0;"></i>
+                                        </article>
+                                    </article>
+                                    {% else %}
+                                    <article class="custom-box-product" onclick="togglePopup('popup-accordion-{{ subcategory.name }}')">
+                                        <article class="img-product">
+                                            {% if subcategory.uploudImg_SubCategory %}
+                                            <img src="{{ subcategory.uploudImg_SubCategory.url }}" alt="{{ subcategory.name }}">
+                                            {% else %}
+                                            <img class="category-item" src="{{ site_settings.first.logo.url }}">
+                                            {% endif %}
+                                        </article>
+                                        <article class="content-product">
+                                            <h3 style="color: {{ color.color_text }};">{{ subcategory.name }}</h3>
+                                            {% if subcategory.description %}
+                                            <p class="description_text" style="color: {{ color.color_text }};">{{ subcategory.description }}</p>
+                                            {% endif %}
+                                            <article class="calories-all">
+                                                {% if subcategory.caloreis %}
+                                                <img src="{% static 'images/callories.svg' %}" alt="">
+                                                <span class="number-calories">{{ subcategory.caloreis|floatformat:0 }} سعره</span>
+                                                {% endif %}
+                                            </article>
+                                        </article>
+                                        <article class="icon-plus-calories-all-price">
+                                            <i class="fa-solid fa-plus" style="left: 0;"></i>
+                                            {% if subcategory.price and subcategory.price_offer > 0 %}
+                                            <article class="unit-according" style="left: 0;">
+                                                <del class="discount-according">{{ subcategory.price|floatformat:0 }}</del>
+                                                <span class="pound-according">{{ subcategory.price_offer|floatformat:0 }} <span>{{ setting.currencies }}</span></span>
+                                            </article>
+                                            {% elif subcategory.size1 or subcategory.size2 or subcategory.size3 %}
+                                            <article class="unit-according-size">
+                                                <article class="size-small"></article>
+                                            </article>
+                                            {% else %}
+                                            <article class="unit-according" style="left: 0;">
+                                                <span class="pound-according">{{ subcategory.price|floatformat:0 }} <span>{{ setting.currencies }}</span></span>
+                                            </article>
+                                            {% endif %}
+                                        </article>
+                                    </article>
+            
+                                    <article id="popup-accordion-{{ subcategory.name }}" class="popup-container" onclick="closePopup(event, 'popup-accordion-{{ subcategory.name }}')">
+                                        <article class="popup_content"
+                                        onclick="event.stopPropagation();"
+                                        style="background-color: {{ color.color }};"
+                                        data-base-price="{% if subcategory.price_offer %}{{ subcategory.price_offer }}{% else %}{{ subcategory.price }}{% endif %}">
+                                            <span class="close-icon" onclick="togglePopup('popup-accordion-{{ subcategory.name }}')">
+                                                <i class="exitMark fa-solid fa-xmark"></i>
+                                            </span>
+            
+                                            <span class="share-btn"
+                                                onclick="openSharePopup('accordion-{{ subcategory.name }}', '{% if subcategory.uploudImg_SubCategory %}{{ subcategory.uploudImg_SubCategory.url }}{% else %}{{ site_settings.first.logo.url }}{% endif %}', '{{ subcategory.name }}', event)">
+                                                <i class="fa-solid fa-share"></i>
+                                            </span>
+            
+                                            <article class="stickyHeader">
+                                                {% if subcategory.uploudImg_SubCategory %}
+                                                <img src="{{ subcategory.uploudImg_SubCategory.url }}" alt="{{ subcategory.name }}" onclick="openImage(this)">
+                                                {% else %}
+                                                <img class="category-item" src="{{ site_settings.first.logo.url }}">
+                                                {% endif %}
+                                                <article class="title-name-and-desc">
+                                                    <h2 style="color: {{ color.color_text }};">{{ subcategory.name }}</h2>
+                                                </article>
+                                                <article class="content">
+                                                    {% if subcategory.description %}
+                                                    <p style="color: {{ color.color_text }};">{{ subcategory.description }}</p>
+                                                    {% endif %}
+                                                    {% if subcategory.size1 or subcategory.size2 or subcategory.size3 %}
+                                                    <article class="additional-items">
+                                                        <article class="size-options">
+                                                            {% if subcategory.size1 %}
+                                                            <button class="large" data-price="{{ subcategory.prise_s1 }}">{{ subcategory.size1 }}</button>
+                                                            {% endif %}
+                                                            {% if subcategory.size2 %}
+                                                            <button class="medium" data-price="{{ subcategory.prise_s2 }}">{{ subcategory.size2 }}</button>
+                                                            {% endif %}
+                                                            {% if subcategory.size3 %}
+                                                            <button class="small" data-price="{{ subcategory.prise_s3 }}">{{ subcategory.size3 }}</button>
+                                                            {% endif %}
+                                                        </article>
+                                                        {% if subcategory.extras.all %}
+                                                        <span class="text-additional" style="color: {{ color.color_text }};"> الإضافات</span>
+                                                        {% endif %}
+                                                        {% for extra in subcategory.extras.all %}
+                                                        <article class="item-add">
+                                                            <label class="checkbox-and-name-item-add-and-price-additional">
+                                                                <article class="checkbox-and-name-item-add">
+                                                                    <input type="checkbox" class="extra-checkbox" data-price="{{ extra.price }}">
+                                                                    <article class="name-item-add-and-calories-all-popframe">
+                                                                        <span class="name-item-add" style="color: {{ color.color_text }};">{{ extra.name }}</span>
+                                                                        {% if extra.caloreis %}
+                                                                        <article class="calories-all-popframe" style="color: {{ color.color_text }};">
+                                                                            <span class="number-calories">{{ extra.caloreis|floatformat:0 }}</span>
+                                                                            <span> سعرة حرارية </span>
+                                                                        </article>
+                                                                        {% endif %}
+                                                                    </article>
+                                                                </article>
+                                                                <span class="price-addition" style="color: {{ color.color_text }};">{{ extra.price|floatformat:0 }}</span>
+                                                            </label>
+                                                        </article>
+                                                        {% endfor %}
+                                                    </article>
+                                                    {% else %}
+                                                    <article class="additional-items">
+                                                        {% if subcategory.extras.all %}
+                                                        <span class="text-additional" style="color: {{ color.color_text }};"> الإضافات</span>
+                                                        {% endif %}
+                                                        {% for extra in subcategory.extras.all %}
+                                                        <article class="item-add">
+                                                            <label class="checkbox-and-name-item-add-and-price-additional">
+                                                                <article class="checkbox-and-name-item-add">
+                                                                    <input type="checkbox" class="extra-checkbox" data-price="{{ extra.price }}">
+                                                                    <article class="name-item-add-and-calories-all-popframe">
+                                                                        <span class="name-item-add" style="color: {{ color.color_text }};">{{ extra.name }}</span>
+                                                                        {% if extra.caloreis %}
+                                                                        <article class="calories-all-popframe" style="color: {{ color.color_text }};">
+                                                                            <span class="number-calories">{{ extra.caloreis|floatformat:0 }}</span>
+                                                                            <span> سعرة حرارية </span>
+                                                                        </article>
+                                                                        {% endif %}
+                                                                    </article>
+                                                                </article>
+                                                                <span class="price-addition" style="color: {{ color.color_text }};">{{ extra.price|floatformat:0 }}</span>
+                                                            </label>
+                                                        </article>
+                                                        {% endfor %}
+                                                    </article>
+                                                    {% endif %}
+                                                </article>
+                                                <article class="pound-description-and-calories-all-popframe">
+                                                    <span class="pound-description" style="color: {{ color.color_text }};">
+                                                        <span> إجمالي السعر: </span>
+                                                        {% if subcategory.price_offer %}
+                                                        <span id="total-price">{{ subcategory.price_offer|floatformat:0 }} <span>{{ setting.currencies }}</span></span>
+                                                        {% else %}
+                                                        <span id="total-price">{{ subcategory.price|floatformat:0 }} <span>{{ setting.currencies }}</span></span>
+                                                        {% endif %}
+                                                    </span>
+                                                </article>
+                                                <button class="back-btn" onclick="togglePopup ('popup-accordion-{{ subcategory.name }}')" style="background-color: {{ color.color }}; color: {{ color.color_text }};">رجوع</button>
+                                            </article>
+                                        </article>
+                                    </article>
+                                    {% endif %}
+                                </article>
+                                {% endfor %}
+                            {% else %}
+                                <article class="no-data-message">
+                                    <p style="text-align: center; color: gray; padding: 20px;">لا يوجد منتجات في هذا القسم حالياً</p>
+                                </article>
+                            {% endif %}
+                        </article> <!-- نهاية custom-spacing -->
+                    </article>
+                </article>
+                {% endfor %}
+            </article>
+            
+    </article>
+
+        <article id="block2" class="random4">
+
+  <!-- ////////// Start Gride \\\\\\\\\\ -->
+  {% for category in main_categories%}
+  <article id="gridContent" class="content hidden">
+    <article class="item-product-all" id="category_{{ category.id }}">
+        <h1 class="name-items-gride">
+            {{ category.name }}
+        </h1>
+        <article class="cards-gride">
+            {% for subcategory in category.subcategories.all %}
+            <article class="grid-item-product"
+            id="product-grid-{{ subcategory.id }}"
+            onclick="togglePopup('popup-grid-{{ subcategory.id }}')">
+   
+
+                {% if subcategory.not_dound %}
+                <article class="overlay-card-gride-img"></article>
+                <article class="overlay-card-gride">غير متوفر</article>
+                {% endif %}
+                {% if subcategory.uploudImg_SubCategory %}
+                <img class="image-product-gride" src="{{ subcategory.uploudImg_SubCategory.url }}"
+                    alt="{{ subcategory.name }}">
+                {% else %}
+                <img class="image-product-gride" src="{{ site_settings.first.logo.url }}">
+                {% endif %}
+                <article class="name-product-gride-and-detailts-product-gride">
+                    <h1 class="name-product-gride">
+                        {{ subcategory.name }}
+                    </h1>
+                </article>
+
+                <article class="calories-all-gride">
+                    {% if subcategory.caloreis %}
+                    <svg fill="#f8931f" width="18px" height="18px" viewBox="0 0 32.00 32.00"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#f8931f">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.064"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M 16.03125 3.46875 L 15.375 4.03125 C 15.375 4.03125 13.035156 5.941406 10.71875 8.71875 C 8.402344 11.496094 6 15.160156 6 19 C 6 21.765625 7.132813 24.070313 8.96875 25.625 C 10.691406 27.082031 12.996094 27.871094 15.5 27.96875 C 15.667969 27.976563 15.832031 28 16 28 C 16.167969 28 16.332031 27.976563 16.5 27.96875 C 19.003906 27.871094 21.308594 27.082031 23.03125 25.625 C 24.867188 24.070313 26 21.765625 26 19 C 26 15.542969 23.585938 11.941406 21.28125 9.0625 C 18.976563 6.183594 16.6875 4.0625 16.6875 4.0625 Z M 15.96875 6.25 C 16.488281 6.742188 17.851563 7.976563 19.71875 10.3125 C 21.914063 13.058594 24 16.558594 24 19 C 24 21.234375 23.132813 22.929688 21.71875 24.125 C 21.375 24.414063 21 24.679688 20.59375 24.90625 C 20.839844 24.316406 21 23.675781 21 23 C 21 16.75 17.65625 12.9375 17.65625 12.9375 L 15.84375 10.90625 L 15.90625 13.625 C 15.90625 13.625 15.910156 14.898438 15.75 16.125 C 15.667969 16.738281 15.554688 17.347656 15.40625 17.6875 C 15.363281 17.785156 15.34375 17.796875 15.3125 17.84375 C 15.207031 17.804688 14.890625 17.648438 14.59375 17.34375 C 14.257813 17 14.03125 16.65625 14.03125 16.65625 L 13.0625 15.15625 L 12.3125 16.78125 C 12.3125 16.78125 11 19.457031 11 23 C 11 23.675781 11.160156 24.316406 11.40625 24.90625 C 11 24.679688 10.625 24.414063 10.28125 24.125 C 8.867188 22.929688 8 21.234375 8 19 C 8 16.042969 10.097656 12.621094 12.28125 10 C 14.132813 7.78125 15.445313 6.695313 15.96875 6.25 Z M 17.65625 16.78125 C 18.339844 18.265625 19 20.339844 19 23 C 19 24.65625 17.65625 26 16 26 C 14.34375 26 13 24.65625 13 23 C 13 21.40625 13.308594 20.058594 13.59375 19.09375 C 14.042969 19.496094 14.59375 19.90625 15.40625 19.90625 C 15.882813 19.90625 16.335938 19.6875 16.625 19.40625 C 16.914063 19.125 17.078125 18.792969 17.21875 18.46875 C 17.445313 17.941406 17.5625 17.355469 17.65625 16.78125 Z">
+                            </path>
+                        </g>
+                    </svg>
+                    <span class="number-calories">
+                        {{ subcategory.caloreis|floatformat:0 }} سعره
+                    </span>
+                    <span>
+
+                    </span>
+                    {% endif %}
+                </article>
+                <article class="plus-grid">
+                    <i class="fa-solid fa-plus" style="right:0;"></i>
+                </article>
+                <article class="unit-gride">
+                    {% if subcategory.price and subcategory.price_offer > 0 %}
+                    <article class="unit-gride-offer" style="left: 0;">
+                        <span class="pound-gride" style="left: 0;">{{ subcategory.price }}
+                            <span>{{setting.currencies}}</span></span>
+                        <del class="discount-gride" style="left: 0;">{{ subcategory.price_offer }}</del>
+                    </article>
+                    {% elif subcategory.size1 or subcategory.size2 or subcategory.size3 %}
+                    <!-- <article class="unit-according-size" style="left: 0;">
+                        <article class="size-small">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                        </article>
+                    </article> -->
+                    {% else %}
+                    <article class="unit-according" style="left: 0;">
+                        <span class="pound-according">{{ subcategory.price }} <span>{{setting.currencies}}</span></span>
+                    </article>
+                    {% endif %}
+
+                </article>
+            </article>
+            <article id="popup-grid-{{ subcategory.id }}"
+            class="popup-container"
+            onclick="closePopup(event, 'popup-grid-{{ subcategory.id }}')">
+   
+
+            <article class="popup_content"
+            onclick="event.stopPropagation();"
+            style="background-color: {{ color.color }};"
+            data-base-price="{% if subcategory.price_offer %}{{ subcategory.price_offer }}{% else %}{{ subcategory.price }}{% endif %}">
+           
+
+                    <span class="close-icon" onclick="togglePopup('popup-grid-{{ subcategory.id }}')">
+                        <i class="exitMark fa-solid fa-xmark"></i>
+                    </span>
+                  
+                    <span class="share-btn"
+                    onclick="openSharePopup(
+                        'product-grid-{{ subcategory.id }}',
+                        '{% if subcategory.uploudImg_SubCategory %}{{ subcategory.uploudImg_SubCategory.url }}{% else %}{{ site_settings.first.logo.url }}{% endif %}',
+                        '{{ subcategory.name }}',
+                        event)">
+                  <!-- <i class="fa-solid fa-share"></i> -->
+              </span> 
+              
+                    <article class="stickyHeader">
+                        {% if subcategory.uploudImg_SubCategory %}
+                        <img src="{{ subcategory.uploudImg_SubCategory.url }}" alt="{{ subcategory.name }}"
+                            onclick="openImage(this)">
+                        {% else %}
+                        <img class="category-item" src="{{ site_settings.first.logo.url }}">
+                        {% endif %}
+                        <article class="title-name-and-desc">
+                            <h2>{{ subcategory.name }}</h2>
+                        </article>
+                        <article class="content">
+                            {% if subcategory.description %}
+                            <p>{{ subcategory.description }}</p>
+                            {% endif %}
+                            {% if subcategory.size1 or subcategory.size2 or subcategory.size3 %}
+                            <article class="additional-items">
+                                <article class="additional-items">
+                                    <article class="size-options">
+                                        {% if subcategory.size1 %}
+                                        <button class="large" data-price="{{ subcategory.prise_s1 }}">{{ subcategory.size1 }}</button>
+                                        {% endif %}
+                                        {% if subcategory.size2 %}
+                                        <button class="medium" data-price="{{ subcategory.prise_s2 }}">{{ subcategory.size2 }}</button>
+                                        {% endif %}
+                                        {% if subcategory.size3 %}
+                                        <button class="small" data-price="{{ subcategory.prise_s3 }}">{{ subcategory.size3 }}</button>
+                                        {% endif %}
+                                    </article>
+                                </article>
+                                {% if subcategory.extras.all %}
+                                <span class="text-additional" style="color: {{ color.color_text }};"> الإضافات </span>
+                                {% endif %}
+                                {% for extra in subcategory.extras.all %}
+                                <article class="item-add">
+                                    <label class="checkbox-and-name-item-add-and-price-additional">
+                                        <article class="checkbox-and-name-item-add">
+                                            <input type="checkbox" class="extra-checkbox"
+                                                data-price="{{ extra.price }}">
+                                            <article class="name-item-add-and-calories-all-popframe">
+                                                <span class="name-item-add" style="color: {{ color.color_text }};">{{ extra.name }}</span>
+                                                {% if extra.caloreis %}
+                                                <article class="calories-all-popframe"
+                                                    style="color: {{ color.color_text }};">
+                                                    <svg fill="#f8931f" width="18px" height="18px" viewBox="0 0 32.00 32.00"
+                        xmlns="http://www.w3.org/2000/svg" stroke="#f8931f">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.064"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M 16.03125 3.46875 L 15.375 4.03125 C 15.375 4.03125 13.035156 5.941406 10.71875 8.71875 C 8.402344 11.496094 6 15.160156 6 19 C 6 21.765625 7.132813 24.070313 8.96875 25.625 C 10.691406 27.082031 12.996094 27.871094 15.5 27.96875 C 15.667969 27.976563 15.832031 28 16 28 C 16.167969 28 16.332031 27.976563 16.5 27.96875 C 19.003906 27.871094 21.308594 27.082031 23.03125 25.625 C 24.867188 24.070313 26 21.765625 26 19 C 26 15.542969 23.585938 11.941406 21.28125 9.0625 C 18.976563 6.183594 16.6875 4.0625 16.6875 4.0625 Z M 15.96875 6.25 C 16.488281 6.742188 17.851563 7.976563 19.71875 10.3125 C 21.914063 13.058594 24 16.558594 24 19 C 24 21.234375 23.132813 22.929688 21.71875 24.125 C 21.375 24.414063 21 24.679688 20.59375 24.90625 C 20.839844 24.316406 21 23.675781 21 23 C 21 16.75 17.65625 12.9375 17.65625 12.9375 L 15.84375 10.90625 L 15.90625 13.625 C 15.90625 13.625 15.910156 14.898438 15.75 16.125 C 15.667969 16.738281 15.554688 17.347656 15.40625 17.6875 C 15.363281 17.785156 15.34375 17.796875 15.3125 17.84375 C 15.207031 17.804688 14.890625 17.648438 14.59375 17.34375 C 14.257813 17 14.03125 16.65625 14.03125 16.65625 L 13.0625 15.15625 L 12.3125 16.78125 C 12.3125 16.78125 11 19.457031 11 23 C 11 23.675781 11.160156 24.316406 11.40625 24.90625 C 11 24.679688 10.625 24.414063 10.28125 24.125 C 8.867188 22.929688 8 21.234375 8 19 C 8 16.042969 10.097656 12.621094 12.28125 10 C 14.132813 7.78125 15.445313 6.695313 15.96875 6.25 Z M 17.65625 16.78125 C 18.339844 18.265625 19 20.339844 19 23 C 19 24.65625 17.65625 26 16 26 C 14.34375 26 13 24.65625 13 23 C 13 21.40625 13.308594 20.058594 13.59375 19.09375 C 14.042969 19.496094 14.59375 19.90625 15.40625 19.90625 C 15.882813 19.90625 16.335938 19.6875 16.625 19.40625 C 16.914063 19.125 17.078125 18.792969 17.21875 18.46875 C 17.445313 17.941406 17.5625 17.355469 17.65625 16.78125 Z">
+                            </path>
+                        </g>
+                    </svg>
+                                                    <span class="number-calories">{{ extra.caloreis|floatformat:0 }}</span>
+                                                    <span> سعرة  </span>
+                                                </article>
+                                                {% endif %}
+                                            </article>
+                                        </article>
+                                        <span class="price-addition" style="color: {{ color.color_text }};">{{ extra.price|floatformat:0 }}</span>
+                                    </label>
+                                </article>
+                                {% endfor %}
+                            </article>
+                            {%else%}
+                            <article class="additional-items">
+                                {% if subcategory.extras.all %}
+                                <span class="text-additional" style="color: {{ color.color_text }};"> الإضافات </span>
+                                {% endif %}
+                                {% for extra in subcategory.extras.all %}
+                                <article class="item-add">
+                                    <label class="checkbox-and-name-item-add-and-price-additional">
+                                        <article class="checkbox-and-name-item-add">
+                                            <input type="checkbox" class="extra-checkbox"
+                                                data-price="{{ extra.price }}">
+                                            <article class="name-item-add-and-calories-all-popframe">
+                                                <span class="name-item-add" style="color: {{ color.color_text }};">{{ extra.name }}</span>
+                                                {% if extra.caloreis %}
+                                                <article class="calories-all-popframe"
+                                                    style="color: {{ color.color_text }};">
+                                                    <span class="number-calories">{{ extra.caloreis|floatformat:0 }}</span>
+                                                    <span> سعرة حرارية </span>
+                                                </article>
+                                                {% endif %}
+                                            </article>
+                                        </article>
+                                        <span class="price-addition" style="color: {{ color.color_text }};">{{ extra.price|floatformat:0 }}</span>
+                                    </label>
+                                </article>
+                                {% endfor %}
+                            </article>
+                            {% endif %}
+                        </article>
+                        <article class="pound-description-and-calories-all-popframe">
+                            <span class="pound-description">
+                                <span> إجمالي السعر: </span>
+                                {% if subcategory.price_offer %}
+                                <span id="total-price">{{ subcategory.price_offer|floatformat:0 }}
+                                    <span>{{setting.currencies}}</span></span>
+                                {% else %}
+                                <span id="total-price">{{ subcategory.price|floatformat:0 }}
+                                    <span>{{setting.currencies}}</span></span>
+                                {% endif %}
+                            </span>
+                        </article>
+                        <button class="back-btn" onclick="togglePopup('popup-grid-{{ subcategory.id }}')">رجوع</button>
+                    </article>
+                </article>
+            </article>
+            {% endfor %}
+        </article>
+    </article>
+</article>
+  {% endfor %}
+        </article>
+
+        <!-- Start Shar Product -->
+        <article id="share-popup-container" class="share-popup-container" onclick="closeSharePopup(event)">
+            <article id="share-popup" class="share-popup" onclick="event.stopPropagation();" style="background-color: {{ color.color }};">
+                <span class="close-icon" onclick="closeSharePopup()"><i class="fa-solid fa-xmark"></i></span>
+                <h3 class="heading-text-share">مشاركة المنتج</h3>
+                <article class="image-name-container-share">
+                    <img id="shareImage" src="" alt="صورة المنتج">
+                    <h3 id="shareProductName" class="product-name-share" style="text-align: center; margin-top: 10px;">
+                    </h3>
+                </article>
+                <article class="button-container">
+                    <a class="copy-button" onclick="copyLink(this)">
+                        <i class="fa-solid fa-copy"></i>
+                        <span>نسخ الرابط</span>
+                    </a>
+                    <a id="whatsapp-share" href="#" target="_blank" class="whatsapp-button">
+                        <img src="{% static 'images/whatsapp-icon-seeklogo.svg' %}" alt="" srcset="">
+                        <span>واتساب</span>
+                    </a>
+                    <a id="telegram-share" href="#" target="_blank" class="telegram-button">
+                        <img src="{% static 'images/Telegram-01.svg' %}" alt="" srcset="">
+                        <span>تليجرام</span>
+                    </a>
+                    <a id="facebook-share" href="#" target="_blank" class="facebook-button">
+                        <img src="{% static 'images/facebook.svg' %}" alt="" srcset="">
+                        <span>فيسبوك</span>
+                    </a>
+                    <a id="messenger-share" href="#" target="_blank" class="messenger-button">
+                        <img src="{% static 'images/Facebook-messenger-02.svg' %}" alt="" srcset="">
+                        <span>ماسنجر</span>
+                    </a>
+                    <a id="tiktok-share" href="#" target="_blank" class="tiktok-button">
+                        <img src="{% static 'images/tiktok.svg' %}" alt="" srcset="">
+                        <span>تيك توك</span>
+                    </a>
+                    <a id="twitter-share" href="#" target="_blank" class="twitter-button">
+                        <img src="{% static 'images/x.svg' %}" alt="" srcset="">
+                        <span>تويتر</span>
+                    </a>
+                    <a id="snapchat-share" href="#" target="_blank" class="snapchat-button">
+                        <img src="{% static 'images/Snap-Ghost-01.svg' %}" alt="" srcset="">
+                        <span>سناب شات</span>
+                    </a>
+                    <a id="linkedin-share" href="#" target="_blank" class="linkedin-button">
+                        <img src="{% static 'images/Linkedin-02.svg' %}" alt="" srcset="">
+                        <span>لينكد إن</span>
+                    </a>
+                </article>
+                <button class="close-btn-share" onclick="closeSharePopup()" style="background-color: {{ color.color }};">إغلاق</button>
+            </article>
+        </article>
+        <!-- End Shar Product -->
+
+        <!-- ////////// Start Footer \\\\\\\\\\ -->
+        <footer style="color: {{ color.color_text }};">
+            <!-- ======= زر فتح النافذة المنبثقة 2 ======= -->
+            <span class="openPopup" data-popup="popup3" >
+                للتواصل مع الشركة المطورة
+                <span class="click-here">
+                    اضغط هنا
+                </span>
+            </span>
+            <!-- ======= النافذة المنبثقة 2 ======= -->
+
+            <article class="popup-overlay" id="popup3">
+                <button class="close-btn" data-close="popup3" style="background-color: {{ color.color }}; color: {{ color.color_text }};"><i class="fa-solid fa-arrow-right"></i></button>
+                <article class="popup popup3" style="background-color: {{ color.color }};">
+                    <img class="logo-quick-menu" src="{% static 'images/logo-activity.jpeg' %}" alt="" srcset="">
+                    <h2 class="content-our">
+                        للتواصل معنا
+                    </h2>
+                    <article class="socialmedia-our">
+                        <a href="tel:0123456789">
+                            <svg class="phone-activity" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                                <path fill="#0f0" d="M13,42h22c3.866,0,7-3.134,7-7V13c0-3.866-3.134-7-7-7H13c-3.866,0-7,3.134-7,7v22	C6,38.866,9.134,42,13,42z"></path><path fill="#fff" d="M35.45,31.041l-4.612-3.051c-0.563-0.341-1.267-0.347-1.836-0.017c0,0,0,0-1.978,1.153	c-0.265,0.154-0.52,0.183-0.726,0.145c-0.262-0.048-0.442-0.191-0.454-0.201c-1.087-0.797-2.357-1.852-3.711-3.205	c-1.353-1.353-2.408-2.623-3.205-3.711c-0.009-0.013-0.153-0.193-0.201-0.454c-0.037-0.206-0.009-0.46,0.145-0.726	c1.153-1.978,1.153-1.978,1.153-1.978c0.331-0.569,0.324-1.274-0.017-1.836l-3.051-4.612c-0.378-0.571-1.151-0.722-1.714-0.332	c0,0-1.445,0.989-1.922,1.325c-0.764,0.538-1.01,1.356-1.011,2.496c-0.002,1.604,1.38,6.629,7.201,12.45l0,0l0,0l0,0l0,0	c5.822,5.822,10.846,7.203,12.45,7.201c1.14-0.001,1.958-0.248,2.496-1.011c0.336-0.477,1.325-1.922,1.325-1.922	C36.172,32.192,36.022,31.419,35.45,31.041z"></path>
+                                </svg>
+                        </a>
+                        <a href="https://wa.me/01026775729" target="_blank">
+                            <svg class="whatssapp-activity" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                                <path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path>
+                                </svg>
+                      </a>
+                        <a href="https://www.facebook.com/share/1DrQ9ttALW/" target="_blank">
+                            <svg class="facebook-acticity" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                                <linearGradient id="Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1" x1="9.993" x2="40.615" y1="9.993" y2="40.615" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2aa4f4"></stop><stop offset="1" stop-color="#007ad9"></stop></linearGradient><path fill="url(#Ld6sqrtcxMyckEl6xeDdMa_uLWV5A9vXIPu_gr1)" d="M24,4C12.954,4,4,12.954,4,24s8.954,20,20,20s20-8.954,20-20S35.046,4,24,4z"></path><path fill="#fff" d="M26.707,29.301h5.176l0.813-5.258h-5.989v-2.874c0-2.184,0.714-4.121,2.757-4.121h3.283V12.46 c-0.577-0.078-1.797-0.248-4.102-0.248c-4.814,0-7.636,2.542-7.636,8.334v3.498H16.06v5.258h4.948v14.452 C21.988,43.9,22.981,44,24,44c0.921,0,1.82-0.084,2.707-0.204V29.301z"></path>
+                                </svg>
+                        </a>
+                        <!-- <a href="https://www.instagram.com/amr_khalid_youssef?igsh=dnBpdDYzeXh6aGxp">
+                            <svg class="instagram-activity" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 48 48">
+                                <radialGradient id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1" cx="19.38" cy="42.035" r="44.899" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fd5"></stop><stop offset=".328" stop-color="#ff543f"></stop><stop offset=".348" stop-color="#fc5245"></stop><stop offset=".504" stop-color="#e64771"></stop><stop offset=".643" stop-color="#d53e91"></stop><stop offset=".761" stop-color="#cc39a4"></stop><stop offset=".841" stop-color="#c837ab"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><radialGradient id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2" cx="11.786" cy="5.54" r="29.813" gradientTransform="matrix(1 0 0 .6663 0 1.849)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4168c9"></stop><stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop></radialGradient><path fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)" d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"></path><path fill="#fff" d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"></path><circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle><path fill="#fff" d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"></path>
+                                </svg>
+                        </a> -->
+                        <a href="mailto:info@activity4dev.com" title="Send us an email">
+                            <svg class="gmail-activity" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32">
+                              <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
+                              <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
+                              <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon>
+                              <path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path>
+                              <path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
+                            </svg>
+                        </a>
+                    </article>
+                </article>
+            </article>
+            </article>
+        </footer>
+        <!-- ////////// End Footer \\\\\\\\\\ -->
+    </section>
+    <script src="{% static 'js/main.js' %}"></script>  
+    <script src="{% static 'js/calculate.js' %}"></script>
+</body>
+{% endfor %}
+{% endfor %}
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+background-color: rgba(0, 0, 0, 0.8),
+
+
+
+
+
+
+
+article.overlay-card,
+.overlay-card-gride {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dbcfb7;
+    z-index: 1;
+}
